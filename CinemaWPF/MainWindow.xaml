@@ -15,8 +15,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <materialDesign:Card Padding="32" Margin="16">
-            <!--<Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
-        </materialDesign:Card>
+        <!--<materialDesign:Card Padding="32" Margin="16">
+            --><!--<Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center"/>--><!--
+        </materialDesign:Card>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="395*"/>
+        </Grid.RowDefinitions>
+        <Rectangle></Rectangle>
+        <Image Source=".\Images\logo.png" HorizontalAlignment="Left" />
+        <TextBlock x:Name="tbTitle" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" />
+        <Frame Grid.Row="1" x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.RowSpan="2"></Frame>
     </Grid>
 </Window>
