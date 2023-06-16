@@ -9,6 +9,69 @@
       Title="AddingMoviePage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="120*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" VerticalAlignment="Center" Content="Добавить сеанс"></Button>
+        <Button Grid.Row="1" VerticalAlignment="Center" Content="Каталог"></Button>
+        <Button Grid.Row="2" VerticalAlignment="Center" Content="Чат"></Button>
+
+        <ScrollViewer Grid.Column="1" Grid.RowSpan="4" Height="300" Width="550">
+            <StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="17*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Grid.Row="0" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Название:</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Страна:</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="2" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Жанр:</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="3" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Режиссер:</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="4" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Сценарий:</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="5" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Продюсер:</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="6" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Продолжительность:</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="7" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Цена билета 2D:</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="8" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Цена билета 3D:</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="9" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Цен билета VIP:</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="9" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="10" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Описание:</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="10" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="11" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Постер:</TextBlock>
+                    <Button Grid.Column="1" Grid.Row="11">Добавить</Button>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

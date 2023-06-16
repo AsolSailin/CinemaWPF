@@ -24,7 +24,14 @@
         </Grid.RowDefinitions>
         <Rectangle></Rectangle>
         <Image Source=".\Images\logo.png" HorizontalAlignment="Left" />
-        <TextBlock x:Name="tbTitle" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" />
+        <TextBlock x:Name="tbTitle" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="#FF8153D4" />
+        <Button Height="40" Width="40" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source=".\Images\account.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
         <Frame Grid.Row="1" x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.RowSpan="2"></Frame>
     </Grid>
 </Window>

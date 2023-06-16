@@ -37,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
       <HintPath>..\packages\AWSSDK.Core.3.7.100.14\lib\net45\AWSSDK.Core.dll</HintPath>
@@ -254,6 +257,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Navigation\NavClass.cs" />
+    <Compile Include="Navigation\NavComponentsClass.cs" />
     <Compile Include="Pages\AddingHallPage.xaml.cs">
       <DependentUpon>AddingHallPage.xaml</DependentUpon>
     </Compile>
@@ -332,6 +337,9 @@
     <Analyzer Include="..\packages\AWSSDK.SecurityToken.3.7.100.14\analyzers\dotnet\cs\AWSSDK.SecurityToken.CodeAnalysis.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\logo.png" />
+    <Resource Include="logo.ico" />
+    <Resource Include="Images\account.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
