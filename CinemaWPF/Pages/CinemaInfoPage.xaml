@@ -9,6 +9,105 @@
       Title="CinemaInfoPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" VerticalAlignment="Center" Content="Добавить фильм"></Button>
+        <Button Grid.Row="1" VerticalAlignment="Center" Content="Добавить сеанс"></Button>
+        <Button Grid.Row="2" VerticalAlignment="Center" Content="Каталог"></Button>
+        <Button Grid.Row="3" VerticalAlignment="Center" Content="Чат"></Button>
+
+        <StackPanel Grid.Column="1" Grid.RowSpan="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10 0 0 0">ДАННЫЕ КИНОТЕАТРА</TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Юр.Лицо:</TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">ИНН:</TextBlock>
+                        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                        <TextBlock Grid.Row="3" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">КПП:</TextBlock>
+                        <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                        <TextBlock Grid.Row="4" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">ОГРН:</TextBlock>
+                        <TextBox Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    </Grid>
+                </StackPanel>
+                
+                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10 0 0 0">АДРЕС:</TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Индекс:</TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Город:</TextBlock>
+                        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                        <TextBlock Grid.Row="3" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Улица, дом:</TextBlock>
+                        <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                        <TextBlock Grid.Row="4" FontSize="17" Margin="10"></TextBlock>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10 10 0 0">Контактная информация:</TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Телефон:</TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Почта:</TextBlock>
+                        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Page>

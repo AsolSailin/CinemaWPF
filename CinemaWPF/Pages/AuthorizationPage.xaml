@@ -9,6 +9,40 @@
       Title="AuthorizationPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="135*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" VerticalAlignment="Center" Content="Авторизация"></Button>
+
+        <StackPanel Grid.Column="1" Grid.RowSpan="4" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="10">Название зала:</TextBlock>
+                <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="10">Название зала:</TextBlock>
+                <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Margin="10">Войти</Button>
+                <TextBlock Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="White">
+                    Нет аккаунта
+                    <Hyperlink Foreground="#FF8153D4">Зарегистируйтесь</Hyperlink>
+                </TextBlock>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Page>
