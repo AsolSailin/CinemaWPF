@@ -9,9 +9,58 @@
       Title="MovieInfoPage">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="120*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="80*"/>
         </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" VerticalAlignment="Center" Content="Каталог"></Button>
+        <Button Grid.Row="1" VerticalAlignment="Center" Content="Чат"></Button>
+
+        <ScrollViewer Grid.Column="1" Grid.RowSpan="3" Height="300" Width="550">
+            <StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="15*"/>
+                        <RowDefinition Height="15*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="50*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0" Source=".\Images\Чебурашка.jpeg" Height="250"/>
+
+                    <Grid Grid.Column="2" Grid.RowSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Name}"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Genre}"></TextBlock>
+                        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding Regisseur}"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.ColumnSpan="2" Text="{Binding Producer}"></TextBlock>
+                        <TextBlock Grid.Row="4" Grid.ColumnSpan="2" Text="{Binding Script}"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.ColumnSpan="2" Text="{Binding Country}"></TextBlock>
+                        <TextBlock Grid.Row="6" Grid.ColumnSpan="2" Text="{Binding Duration}"></TextBlock>
+                    </Grid>
+
+                    <Button Grid.Row="1" VerticalAlignment="Center" Content="Купить билет"></Button>
+                    <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding Description}"></TextBlock>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

@@ -29,24 +29,50 @@
             <StackPanel>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition />
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="80*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                 </Grid>
 
-                <ListView x:Name="lvMovies" >
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" VerticalAlignment="Center" Content="2D"></Button>
+                    <Button Grid.Column="1" VerticalAlignment="Center" Content="3D"></Button>
+                    <Button Grid.Column="2" VerticalAlignment="Center" Content="VIP"></Button>
+                </Grid>
+                
+                <ListView Grid.Row="1" x:Name="lvDates" >
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <WrapPanel Orientation="Horizontal"/>
+                            <WrapPanel Orientation="Vertical"/>
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Vertical">
-                                <Image Source="{Binding Poster}" Width="270" Height="250"/>
-                                <TextBlock Text="{Binding Name}"></TextBlock>
+                                <TextBlock Text="{Binding Time}"></TextBlock>
+                                <ListView x:Name="lvTimes" >
+                                    <ListView.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ListView.ItemsPanel>
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Vertical">
+                                                <Button Content="{Binding Time}"></Button>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>

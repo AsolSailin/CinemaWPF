@@ -9,9 +9,63 @@
       Title="TicketsListPage">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="120*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="30*"/>
         </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" VerticalAlignment="Center" Content="Каталог"></Button>
+        <Button Grid.Row="1" VerticalAlignment="Center" Content="Чат"></Button>
+
+        <ScrollViewer Grid.Column="1" Grid.RowSpan="2" Height="300" Width="600" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <ListView x:Name="lvTickets" >
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Vertical"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{Binding Poster}" Width="270" Height="250"/>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Номер билета"></TextBlock>
+                                    <TextBlock Text="{Binding ID}"></TextBlock>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Название показа"></TextBlock>
+                                        <TextBlock Text="{Binding Name}"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Зал"></TextBlock>
+                                        <TextBlock Text="{Binding ID}"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Номер места"></TextBlock>
+                                        <TextBlock Text="{Binding ID}"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Дата"></TextBlock>
+                                        <TextBlock Text="{Binding ID}"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Время"></TextBlock>
+                                        <TextBlock Text="{Binding ID}"></TextBlock>
+                                    </StackPanel>
+                                    <Button HorizontalAlignment="Center" Content="О фильме"></Button>
+                                    <Button HorizontalAlignment="Center" Content="Вернуть билет"></Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
