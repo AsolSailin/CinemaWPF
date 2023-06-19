@@ -339,9 +339,7 @@
   <ItemGroup>
     <Resource Include="Pages\Images\14+.jpg" />
     <Resource Include="Pages\Images\65.jpg" />
-    <Resource Include="Pages\Images\logo.png" />
     <Resource Include="logo.ico" />
-    <Resource Include="Pages\Images\account.png" />
     <Resource Include="Pages\Images\Авангард.jpg" />
     <Resource Include="Pages\Images\Баспринципные в деревне.jpg" />
     <Resource Include="Pages\Images\Без ответа.jpg" />
