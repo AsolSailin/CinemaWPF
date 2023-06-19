@@ -26,7 +26,7 @@ namespace CinemaWPF
         {
             InitializeComponent();
             NavClass.main = this;
-            NavClass.NextPage(new NavComponentsClass("СТРАНИЦА", new InitialPage()));
+            NavClass.NextPage(new NavComponentsClass("СТРАНИЦА", new AuthorizationPage()));
         }
     }
 }

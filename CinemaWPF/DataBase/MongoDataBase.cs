@@ -178,7 +178,7 @@ namespace CinemaWPF.DataBase
         }*/
 
         //Get
-        public static static List<Movie> GetMovieList()
+        public static List<Movie> GetMovieList()
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Cinema_WPF_DB");

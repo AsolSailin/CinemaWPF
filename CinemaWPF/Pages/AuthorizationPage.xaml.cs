@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaWPF.Navigation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,32 @@ namespace CinemaWPF.Pages
         public AuthorizationPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (tbLogin.Text != "" && tbPassword.Text != "")
+            {
+                DataBase.MongoDataBase.CurrentUser = DataBase.MongoDataBase.FindByUserLogin(tbLogin.Text);
+
+                if (DataBase.MongoDataBase.CurrentUser != null && DataBase.MongoDataBase.CurrentUser.Password == tbPassword.Text)
+                {
+                    if (DataBase.MongoDataBase.CurrentUser.Role == "Client")
+                        NavClass.NextPage(new NavComponentsClass("ЛИЧНЫЙ КАБИНЕТ", new ClientAccountPage()));
+                    else if (DataBase.MongoDataBase.CurrentUser.Role == "Admin")
+                        NavClass.NextPage(new NavComponentsClass("ЛИЧНЫЙ КАБИНЕТ", new AdminAccountPage()));
+                }
+                else
+                    MessageBox.Show("Неверный логин или пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+                MessageBox.Show("Для входа введите логин и пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("СТРАНИЦА РЕГИСТРАЦИИ", new RegistrationPage()));
         }
     }
 }

@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CinemaWPF.Core;
 using System.IO;
 
 namespace CinemaWPF.Pages
@@ -29,19 +28,5 @@ namespace CinemaWPF.Pages
             InitializeComponent();
             lvMovies.ItemsSource = DataBase.MongoDataBase.GetMovieList();
         }
-
-        /*private void Image_Click(object sender, RoutedEventArgs e)
-        {
-            var path = @"C:\Users\Руслана\source\repos\CinemaWPF\CinemaWPF";
-
-            foreach (var item in App.Connection.Service.ToArray().Where(i => !string.IsNullOrWhiteSpace(i.MainImagePath)))
-            {
-                var fullPath = path + item.MainImagePath;
-                var byteImage = File.ReadAllBytes(fullPath);
-                item.MainImageByte = byteImage;
-            }
-
-            App.Connection.SaveChanges();
-        }*/
     }
 }
