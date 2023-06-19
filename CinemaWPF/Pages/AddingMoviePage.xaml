@@ -13,7 +13,8 @@
             <RowDefinition Height="15*"/>
             <RowDefinition Height="15*"/>
             <RowDefinition Height="15*"/>
-            <RowDefinition Height="105*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
@@ -47,31 +48,32 @@
                     </Grid.ColumnDefinitions>
                     
                     <TextBlock Grid.Column="0" Grid.Row="0" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Название:</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="0" x:Name="tbName" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="1" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Страна:</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="1" x:Name="tbCountry" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="2" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Жанр:</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="2" x:Name="tbGenre" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="3" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Режиссер:</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="3" x:Name="tbRegisseur" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="4" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Сценарий:</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="4" x:Name="tbScript" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="5" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Продюсер:</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="5" x:Name="tbProducer" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="6" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Продолжительность:</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="6" x:Name="tbDuration" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="7" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Цена билета 2D:</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="7" x:Name="tbPrice2D" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="8" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Цена билета 3D:</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="8" x:Name="tbPrice3D" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="9" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Цен билета VIP:</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="9" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="9" x:Name="tbPriceVIP" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="10" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Описание:</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="10" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="10" x:Name="tbDescription" VerticalAlignment="Center" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="11" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="12" FontSize="17">Постер:</TextBlock>
-                    <Button Grid.Column="1" Grid.Row="11">Добавить</Button>
+                    <Button Grid.Column="1" Grid.Row="11" Click="Button_Click_1" Content="Добавить"></Button>
                 </Grid>
             </StackPanel>
         </ScrollViewer>
+        <Button Grid.Column="1" Grid.Row="4" Click="Button_Click" Content="Купить билет" HorizontalAlignment="Center" VerticalAlignment="Top"></Button>
     </Grid>
 </Page>

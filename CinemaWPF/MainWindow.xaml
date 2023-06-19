@@ -23,12 +23,12 @@
             <RowDefinition Height="395*"/>
         </Grid.RowDefinitions>
         <Rectangle></Rectangle>
-        <Image Source=".\InitialImages\logo.png" HorizontalAlignment="Left" />
+        <Image Source=".\Images\InitialImages\logo.png" HorizontalAlignment="Left" />
         <TextBlock x:Name="tbTitle" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="#FF8153D4" />
         <Button Height="40" Width="40" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0">
             <Button.Template>
                 <ControlTemplate>
-                    <Image Source=".\InitialImages\account.png"/>
+                    <Image Source=".\Images\InitialImages\account.png"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
