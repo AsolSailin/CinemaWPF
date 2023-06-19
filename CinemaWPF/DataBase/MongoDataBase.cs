@@ -112,28 +112,28 @@ namespace CinemaWPF.DataBase
         }
 
         //Replace
-        public static async Task UserReplace(ObjectId id, User user)
+        public static async Task UserReplace(User user)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Cinema_WPF_DB");
             var collection = database.GetCollection<User>("UserList");
-            await collection.ReplaceOneAsync(x => x.Id == id, user);
+            await collection.ReplaceOneAsync(x => x.Id == user.Id, user);
         }
 
-        public static async Task MovieReplace(ObjectId id, Movie movie)
+        public static async Task MovieReplace(Movie movie)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Cinema_WPF_DB");
             var collection = database.GetCollection<Movie>("MovieList");
-            await collection.ReplaceOneAsync(x => x.Id == id, movie);
+            await collection.ReplaceOneAsync(x => x.Id == movie.Id, movie);
         }
 
-        public static async Task SessionReplace(ObjectId id, Session session)
+        public static async Task SessionReplace(Session session)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Cinema_WPF_DB");
             var collection = database.GetCollection<Session>("SessionList");
-            await collection.ReplaceOneAsync(x => x.Id == id, session);
+            await collection.ReplaceOneAsync(x => x.Id == session.Id, session);
         }
 
         //Delete
