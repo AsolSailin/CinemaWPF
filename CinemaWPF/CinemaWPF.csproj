@@ -376,6 +376,9 @@
     <Resource Include="Pages\Images\человек муравей.jpg" />
     <Resource Include="Pages\Images\Шазам! Ярость богов.jpg" />
     <Resource Include="Pages\Images\Я хочу! Я буду!.jpg" />
+    <Resource Include="InitialImages\account.png" />
+    <Resource Include="InitialImages\logo.ico" />
+    <Resource Include="InitialImages\logo.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
