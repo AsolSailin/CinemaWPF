@@ -23,6 +23,23 @@ namespace CinemaWPF.Pages
         public ClientAccountPage()
         {
             InitializeComponent();
+            GetTextBoxValue();
+        }
+
+        public void GetTextBoxValue()
+        {
+            tbSurname.Text = DataBase.MongoDataBase.CurrentUser.Surname;
+            tbName.Text = DataBase.MongoDataBase.CurrentUser.Name;
+            tbPatronymic.Text = DataBase.MongoDataBase.CurrentUser.Patronymic;
+            tbPhoneNumber.Text = DataBase.MongoDataBase.CurrentUser.PhoneNumber;
+            tbEMail.Text = DataBase.MongoDataBase.CurrentUser.EMail;
+            tbLogin.Text = DataBase.MongoDataBase.CurrentUser.Login;
+            tbPassword.Text = DataBase.MongoDataBase.CurrentUser.Password;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
