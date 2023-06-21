@@ -37,16 +37,15 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="10">Данные банковской карты:</TextBlock>
                 <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Номер:</TextBlock>
-                <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbNumber" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                 <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Имя владельца:</TextBlock>
-                <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                <TextBox Grid.Row="2" Grid.Column="1" x:Name="tbName" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                 <TextBlock Grid.Row="3" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Срок действия:</TextBlock>
-                <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbValidityPeriod" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
                 <TextBlock Grid.Row="4" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">CVC:</TextBlock>
-                <TextBox Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
-                <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Margin="10">Купить билет</Button>
+                <TextBox Grid.Row="4" Grid.Column="1" x:Name="tbCVC" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Margin="10" Content="Купить билет" Click="Button_Click"></Button>
             </Grid>
         </StackPanel>
     </Grid>
