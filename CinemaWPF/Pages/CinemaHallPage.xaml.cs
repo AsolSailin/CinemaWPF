@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaWPF.Navigation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,9 +22,8 @@ namespace CinemaWPF.Pages
     /// </summary>
     public partial class CinemaHallPage : Page
     {
-        const int placeCount = 50;
-        private int placeNumber = 1;
-        public int count = 0;
+        private int count = 0;
+        private string placeNumber;
 
         public CinemaHallPage()
         {
@@ -33,33 +33,13 @@ namespace CinemaWPF.Pages
 
         private void GenerateHall()
         {
-            /*@foreach(var p in dataBase.CurrentSession.Hall.Places)
-    {
-                @if(p.Value == "false")
-        {
-            < button class="buttonOne" @onclick="() => Place(p.Key)" disabled="@disabledBtn">@p.Key</button>
-    }
-        else
-        {
-            <button class="buttonTwo" @onclick="() => OccupiedPlace()">@p.Key</button>
-}
-
-count++;
-@if(count == 10)
-        {
-            < br /> < br />
-            count = 0;
-}
-    }*/
-            DataBase.MongoDataBase.CurrentSession = DataBase.MongoDataBase.FindSessionByDate("25.05.2023 14:00", DataBase.MongoDataBase.FindByMovieName("Чебурашка"), "2D");
-
             foreach (var p in DataBase.MongoDataBase.CurrentSession.Hall.Places)
             {
                 if (p.Value == "false")
                 {
                     var button = new Button()
                     {
-                        Content = placeNumber,
+                        Content = p.Key,
                         FontSize = 10,
                         Height = 43,
                         Width = 43,
@@ -68,6 +48,7 @@ count++;
 
                     button.Click += PlaceBtn_Click;
                     count++;
+
                     if (count <= 10)
                         spPlaces1.Children.Add(button);
                     else if (count <= 20)
@@ -83,7 +64,7 @@ count++;
                 {
                     var button = new Button()
                     {
-                        Content = placeNumber,
+                        Content = p.Key,
                         FontSize = 10,
                         Height = 43,
                         Width = 43,
@@ -93,6 +74,7 @@ count++;
 
                     button.Click += OccupiedPlaceBtn_Click;
                     count++;
+
                     if (count < 10)
                         spPlaces1.Children.Add(button);
                     else if (count < 20)
@@ -104,46 +86,50 @@ count++;
                     else
                         spPlaces5.Children.Add(button);
                 }
-
-                placeNumber++;
             }
 
-            /*for (int i = 0; i < placeCount; i++)
+            if (DataBase.MongoDataBase.CurrentUser.Role == "Client")
             {
-                var button = new Button()
-                {
-                    Content = placeNumber,
-                    FontSize = 10,
-                    Height = 43,
-                    Width = 43,
-                    Margin = new Thickness(3)
-                };
-
-                button.Click += PlaceBtn_Click;
-
-                if (i < 10)
-                    spPlaces1.Children.Add(button);
-                else if (i < 20)
-                    spPlaces2.Children.Add(button);
-                else if (i < 30)
-                    spPlaces3.Children.Add(button);
-                else if (i < 40)
-                    spPlaces4.Children.Add(button);
-                else
-                    spPlaces5.Children.Add(button);
-
-                placeNumber++;
-            }*/
+                btnBuyOrDelete.Content = "Купить билет";
+                btnBuyOrDelete.Click += BuyBtn_Click;
+            }
+            else if (DataBase.MongoDataBase.CurrentUser.Role == "Admin")
+            {
+                btnBuyOrDelete.Content = "Удалить сеанс";
+                btnBuyOrDelete.Click += DeleteBtn_Click;
+            }
         }
 
         private void PlaceBtn_Click(object sender, RoutedEventArgs e)
         {
-            var button = (Button)sender;
+            var btn = (Button)sender;
+            placeNumber = btn.Content.ToString();
         }
 
         private void OccupiedPlaceBtn_Click(object sender, RoutedEventArgs e)
         {
-            var button = (Button)sender;
+            if (DataBase.MongoDataBase.CurrentUser.Role == "Client")
+                MessageBox.Show("Вы не можете выбрать это место, так как оно уже занято!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void BuyBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if(placeNumber != "")
+            {
+                DataBase.MongoDataBase.CurrentSession.Hall.Places[placeNumber] = "true";
+                _ = DataBase.MongoDataBase.SessionReplace(DataBase.MongoDataBase.CurrentSession);
+                DataBase.MongoDataBase.CurrentPlace = placeNumber;
+                NavClass.NextPage(new NavComponentsClass("ДАННЫЕ БАНКОВСКОЙ КАРТЫ", new TicketBuyPage()));
+            }
+            else
+                MessageBox.Show("Для перехода на следующую страницу необходимо выбрать место в кинозале!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void DeleteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            _ = DataBase.MongoDataBase.DeleteSession(DataBase.MongoDataBase.CurrentSession.Id);
+            MessageBox.Show("Киносеанс был удален из базы данных");
+            NavClass.NextPage(new NavComponentsClass("ИНФОРМАЦИЯ О ФИЛЬМЕ", new MovieInfoPage()));
         }
     }
 }

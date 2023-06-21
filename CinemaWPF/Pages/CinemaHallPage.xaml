@@ -31,6 +31,6 @@
             <StackPanel x:Name="spPlaces5" Orientation="Horizontal"/>
         </StackPanel>
 
-        <Button Grid.Row="3" Grid.Column="1" Content="Купить билет" HorizontalAlignment="Center" VerticalAlignment="Top"></Button>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="btnBuyOrDelete" HorizontalAlignment="Center" VerticalAlignment="Top"></Button>
     </Grid>
 </Page>
