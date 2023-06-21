@@ -31,13 +31,13 @@
                         <RowDefinition Height="15*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="25*"/>
                         <ColumnDefinition Width="50*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Image Grid.Column="0" Source=".\Images\Чебурашка.jpeg" Height="250"/>
+                    <Image Grid.Column="0" x:Name="imgPoster" Height="250"/>
 
-                    <Grid Grid.Column="2" Grid.RowSpan="2">
+                    <Grid Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition />
                             <RowDefinition />
@@ -48,17 +48,28 @@
                             <RowDefinition />
                         </Grid.RowDefinitions>
 
-                        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Name}"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Genre}"></TextBlock>
-                        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding Regisseur}"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.ColumnSpan="2" Text="{Binding Producer}"></TextBlock>
-                        <TextBlock Grid.Row="4" Grid.ColumnSpan="2" Text="{Binding Script}"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.ColumnSpan="2" Text="{Binding Country}"></TextBlock>
-                        <TextBlock Grid.Row="6" Grid.ColumnSpan="2" Text="{Binding Duration}"></TextBlock>
+                        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" x:Name="tbName" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Name="tbGenre" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" x:Name="tbRegisseur" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.ColumnSpan="2" x:Name="tbProducer" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="4" Grid.ColumnSpan="2" x:Name="tbScript" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.ColumnSpan="2" x:Name="tbCountry" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="6" Grid.ColumnSpan="2" x:Name="tbDuration" TextWrapping="Wrap"></TextBlock>
                     </Grid>
 
-                    <Button Grid.Row="1" VerticalAlignment="Center" Content="Купить билет"></Button>
-                    <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding Description}"></TextBlock>
+                    <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Купить билет"></Button>
+                        <Button Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Сеансы"></Button>
+                        <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Изменить"></Button>
+                        <Button Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Удалить"></Button>
+                    </Grid>
+
+                    <TextBlock Grid.Row="2" Grid.ColumnSpan="2" x:Name="tbDescription" TextWrapping="Wrap"></TextBlock>
                 </Grid>
             </StackPanel>
         </ScrollViewer>

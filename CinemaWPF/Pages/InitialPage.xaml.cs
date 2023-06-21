@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using CinemaWPF.Navigation;
+using System.Collections;
 
 namespace CinemaWPF.Pages
 {
@@ -32,11 +33,40 @@ namespace CinemaWPF.Pages
 
         private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            var item = sender as ListViewItem;
-            if (item != null && item.IsSelected)
+            if (sender is ListViewItem item && item.IsSelected)
             {
+                object o = lvMovies.SelectedItem;
+                ListViewItem lvi = (ListViewItem)lvMovies.ItemContainerGenerator.ContainerFromItem(o);
+                TextBlock tb = FindByName("tbName", lvi) as TextBlock;
+
+                tb?.Dispatcher.BeginInvoke(new Func<bool>(tb.Focus));
+
+                DataBase.MongoDataBase.CurrentMovie = DataBase.MongoDataBase.FindByMovieName(tb.Text);
                 NavClass.NextPage(new NavComponentsClass("ИНФОРМАЦИЯ О ФИЛЬМЕ", new MovieInfoPage()));
             }
+        }
+
+        private FrameworkElement FindByName(string name, FrameworkElement root)
+        {
+            Stack<FrameworkElement> tree = new Stack<FrameworkElement>();
+            tree.Push(root);
+
+            while (tree.Count > 0)
+            {
+                FrameworkElement current = tree.Pop();
+                if (current.Name == name)
+                    return current;
+
+                int count = VisualTreeHelper.GetChildrenCount(current);
+                for (int i = 0; i < count; ++i)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(current, i);
+                    if (child is FrameworkElement element)
+                        tree.Push(element);
+                }
+            }
+
+            return null;
         }
     }
 }

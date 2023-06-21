@@ -23,6 +23,20 @@ namespace CinemaWPF.Pages
         public MovieInfoPage()
         {
             InitializeComponent();
+            GetTextBoxValue();
+        }
+
+        public void GetTextBoxValue()
+        {
+            imgPoster.Source = new BitmapImage(new Uri(@"/CinemaWPF;component" + DataBase.MongoDataBase.CurrentMovie.Poster, UriKind.Relative));
+            tbName.Text = DataBase.MongoDataBase.CurrentMovie.Name;
+            tbGenre.Text = DataBase.MongoDataBase.CurrentMovie.Genre;
+            tbRegisseur.Text = DataBase.MongoDataBase.CurrentMovie.Regisseur;
+            tbProducer.Text = DataBase.MongoDataBase.CurrentMovie.Producer;
+            tbScript.Text = DataBase.MongoDataBase.CurrentMovie.Script;
+            tbCountry.Text = DataBase.MongoDataBase.CurrentMovie.Country;
+            tbDuration.Text = DataBase.MongoDataBase.CurrentMovie.Duration;
+            tbDescription.Text = DataBase.MongoDataBase.CurrentMovie.Description;
         }
     }
 }
