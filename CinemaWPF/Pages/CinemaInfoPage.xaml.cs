@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaWPF.Navigation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,9 +26,21 @@ namespace CinemaWPF.Pages
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        //Navigation
+        private void AddingMovieBtn_Click(object sender, RoutedEventArgs e)
         {
             DataBase.MongoDataBase.RedMovie = false;
+            NavClass.NextPage(new NavComponentsClass("ДОБАВЛЕНИЕ НОВОГО КИНОФИЛЬМА", new AddingOrEditingMoviePage()));
+        }
+
+        private void AddingSessionBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("ДОБАВЛЕНИЕ НОВОГО КИНОСЕАНСА", new AddingMovieSessionPage()));
+        }
+
+        private void CatalogBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
         }
     }
 }

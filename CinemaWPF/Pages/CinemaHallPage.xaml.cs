@@ -131,5 +131,11 @@ namespace CinemaWPF.Pages
             MessageBox.Show("Киносеанс был удален из базы данных");
             NavClass.NextPage(new NavComponentsClass("ИНФОРМАЦИЯ О ФИЛЬМЕ", new MovieInfoPage()));
         }
+
+        //Navigation
+        private void CatalogBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
+        }
     }
 }

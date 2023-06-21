@@ -63,5 +63,16 @@ namespace CinemaWPF.Pages
             else
                 MessageBox.Show("Для создания аккаунта все поля должны быть заполнены!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
+
+        //Navigation
+        private void AuthorizationBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("АВТОРИЗАЦИЯ", new AuthorizationPage()));
+        }
+
+        private void CatalogBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
+        }
     }
 }

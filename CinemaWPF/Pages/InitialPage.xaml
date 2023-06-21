@@ -10,17 +10,10 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="135*"/>
+            <RowDefinition Height="150*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="80*"/>
-        </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="0" VerticalAlignment="Center" Content="Чат"></Button>
-
-        <ScrollViewer Grid.Column="1" Grid.RowSpan="2" Height="300" Width="600" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        <ScrollViewer  Height="300" Width="600" ScrollViewer.VerticalScrollBarVisibility="Disabled">
             <StackPanel>
                 <ListView x:Name="lvMovies" >
                     <ListView.ItemsPanel>

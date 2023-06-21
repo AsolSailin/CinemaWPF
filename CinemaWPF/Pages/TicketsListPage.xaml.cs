@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaWPF.Navigation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace CinemaWPF.Pages
         public TicketsListPage()
         {
             InitializeComponent();
+        }
+
+        //Navigation
+        private void CatalogBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
         }
     }
 }

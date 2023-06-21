@@ -11,8 +11,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="15*"/>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="120*"/>
+            <RowDefinition Height="135*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
@@ -20,8 +19,7 @@
             <ColumnDefinition Width="30*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="0" VerticalAlignment="Center" Content="Каталог"></Button>
-        <Button Grid.Row="1" VerticalAlignment="Center" Content="Чат"></Button>
+        <Button Grid.Row="0" VerticalAlignment="Center" Content="Каталог" Click="CatalogBtn_Click"></Button>
 
         <Image Grid.Column="2" Grid.RowSpan="3" Source=".\Images\Чебурашка.jpeg" Height="250"/>
 

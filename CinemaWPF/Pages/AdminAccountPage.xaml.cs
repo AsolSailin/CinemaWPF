@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaWPF.Navigation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -68,6 +69,17 @@ namespace CinemaWPF.Pages
                 _ = DataBase.MongoDataBase.UserReplace(DataBase.MongoDataBase.CurrentUser);
                 MessageBox.Show("Пользователь был изменен");
             }
+        }
+
+        //Navigation
+        private void CinemaInfoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("ИНВОРМАЦИЯ О КИНОТЕАТРЕ", new CinemaInfoPage()));
+        }
+
+        private void CatalogBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
         }
     }
 }

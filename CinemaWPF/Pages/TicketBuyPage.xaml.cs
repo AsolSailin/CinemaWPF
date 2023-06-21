@@ -52,5 +52,11 @@ namespace CinemaWPF.Pages
             else
                 MessageBox.Show("Для завершения покупки билета все поля должны быть заполнены!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
+
+        //Navigation
+        private void CatalogBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
+        }
     }
 }

@@ -51,5 +51,11 @@ namespace CinemaWPF.Pages
         {
             NavClass.NextPage(new NavComponentsClass("СТРАНИЦА РЕГИСТРАЦИИ", new RegistrationPage()));
         }
+
+        //Navigation
+        private void CatalogBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
+        }
     }
 }

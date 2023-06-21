@@ -63,6 +63,7 @@ namespace CinemaWPF.Pages
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
+            DataBase.MongoDataBase.RedMovie = true;
             NavClass.NextPage(new NavComponentsClass("ИЗМЕНЕНИЕ ИНФОРМАЦИИ О ФИЛЬМЕ", new AddingOrEditingMoviePage()));
         }
 
@@ -78,9 +79,10 @@ namespace CinemaWPF.Pages
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        //Navigation
+        private void CatalogBtn_Click(object sender, RoutedEventArgs e)
         {
-            DataBase.MongoDataBase.RedMovie = true;
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
         }
     }
 }
