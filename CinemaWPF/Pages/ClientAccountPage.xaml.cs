@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static MongoDB.Driver.WriteConcern;
 
 namespace CinemaWPF.Pages
 {
@@ -20,6 +21,9 @@ namespace CinemaWPF.Pages
     /// </summary>
     public partial class ClientAccountPage : Page
     {
+        private bool isDisable = true;
+        private int count = 0;
+
         public ClientAccountPage()
         {
             InitializeComponent();
@@ -39,7 +43,55 @@ namespace CinemaWPF.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (isDisable)
+            {
+                isDisable = false;
 
+                tbSurname.IsEnabled = true;
+                tbName.IsEnabled = true;
+                tbPatronymic.IsEnabled = true;
+                tbPhoneNumber.IsEnabled = true;
+                tbEMail.IsEnabled = true;
+                tbLogin.IsEnabled = true;
+                tbPassword.IsEnabled = true;
+
+                tbSurname.Foreground = Brushes.White;
+                tbName.Foreground = Brushes.White;
+                tbPatronymic.Foreground = Brushes.White;
+                tbPhoneNumber.Foreground = Brushes.White;
+                tbEMail.Foreground = Brushes.White;
+                tbLogin.Foreground = Brushes.White;
+                tbPassword.Foreground = Brushes.White;
+            }
+            else
+            {
+                isDisable = true;
+
+                tbSurname.IsEnabled = false;
+                tbName.IsEnabled = false;
+                tbPatronymic.IsEnabled = false;
+                tbPhoneNumber.IsEnabled = false;
+                tbEMail.IsEnabled = false;
+                tbLogin.IsEnabled = false;
+                tbPassword.IsEnabled = false;
+
+                tbSurname.Foreground = Brushes.Black;
+                tbName.Foreground = Brushes.Black;
+                tbPatronymic.Foreground = Brushes.Black;
+                tbPhoneNumber.Foreground = Brushes.Black;
+                tbEMail.Foreground = Brushes.Black;
+                tbLogin.Foreground = Brushes.Black;
+                tbPassword.Foreground = Brushes.Black;
+            }
+
+            count++;
+
+            if (count == 2)
+            {
+                count = 0;
+                _ = DataBase.MongoDataBase.UserReplace(DataBase.MongoDataBase.CurrentUser);
+                MessageBox.Show("Пользователь был изменен");
+            }
         }
     }
 }

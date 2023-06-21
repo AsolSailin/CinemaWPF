@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static MongoDB.Driver.WriteConcern;
 
 namespace CinemaWPF.Pages
 {
@@ -20,6 +21,9 @@ namespace CinemaWPF.Pages
     /// </summary>
     public partial class AdminAccountPage : Page
     {
+        private bool isDisable = true;
+        private int count = 0;
+
         public AdminAccountPage()
         {
             InitializeComponent();
@@ -39,7 +43,31 @@ namespace CinemaWPF.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (isDisable)
+            {
+                isDisable = false;
+                tbLogin.IsEnabled = true;
+                tbPassword.IsEnabled = true;
+                tbLogin.Foreground = Brushes.White;
+                tbPassword.Foreground = Brushes.White;
+            }
+            else
+            {
+                isDisable = true;
+                tbLogin.IsEnabled = false;
+                tbPassword.IsEnabled = false;
+                tbLogin.Foreground = Brushes.Black;
+                tbPassword.Foreground = Brushes.Black;
+            }
 
+            count++;
+
+            if (count == 2)
+            {
+                count = 0;
+                _ = DataBase.MongoDataBase.UserReplace(DataBase.MongoDataBase.CurrentUser);
+                MessageBox.Show("Пользователь был изменен");
+            }
         }
     }
 }
