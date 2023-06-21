@@ -1,8 +1,8 @@
 ﻿using CinemaWPF.Core;
+using CinemaWPF.Navigation;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,22 +19,33 @@ using System.Windows.Shapes;
 namespace CinemaWPF.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AddingMoviePage.xaml
+    /// Логика взаимодействия для AddingOrEditingMoviePage.xaml
     /// </summary>
-    public partial class AddingMoviePage : Page
+    public partial class AddingOrEditingMoviePage : Page
     {
         public string imageName;
 
-        public AddingMoviePage()
+        public AddingOrEditingMoviePage()
         {
             InitializeComponent();
+
+            if (DataBase.MongoDataBase.RedMovie)
+            {
+                btnSaveOrRed.Content = "Редактировать";
+                btnSaveOrRed.Click += RedBtn_Click;
+            }
+            else
+            {
+                btnSaveOrRed.Content = "Сохранить";
+                btnSaveOrRed.Click += SaveBtn_Click;
+            }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
             if (tbName.Text != "" && tbGenre.Text != "" && tbRegisseur.Text != "" &&
-                tbProducer.Text != "" && tbScript.Text != "" && tbCountry.Text != "" && 
-                tbDuration.Text != "" && tbPrice2D.Text != "" && tbPrice3D.Text != "" && 
+                tbProducer.Text != "" && tbScript.Text != "" && tbCountry.Text != "" &&
+                tbDuration.Text != "" && tbPrice2D.Text != "" && tbPrice3D.Text != "" &&
                 tbPriceVIP.Text != "" && tbDescription.Text != "" && imageName != "")
             {
                 if (DataBase.MongoDataBase.FindByMovieName(tbName.Text) == null)
@@ -65,7 +76,22 @@ namespace CinemaWPF.Pages
                 MessageBox.Show("Для добавления нового фильма все поля должны быть заполнены!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void RedBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (tbName.Text != "" && tbGenre.Text != "" && tbRegisseur.Text != "" &&
+                tbProducer.Text != "" && tbScript.Text != "" && tbCountry.Text != "" &&
+                tbDuration.Text != "" && tbPrice2D.Text != "" && tbPrice3D.Text != "" &&
+                tbPriceVIP.Text != "" && tbDescription.Text != "" && imageName != "")
+            {
+                _ = DataBase.MongoDataBase.MovieReplace(DataBase.MongoDataBase.CurrentMovie);
+                MessageBox.Show("Фильм был изменен");
+                NavClass.NextPage(new NavComponentsClass("ИНФОРМАЦИЯ О ФИЛЬМЕ", new MovieInfoPage()));
+            }
+            else
+                MessageBox.Show("Для изменения фильма все поля должны быть заполнены!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void ImageBtn_Click(object sender, RoutedEventArgs e)
         {
             try
             {

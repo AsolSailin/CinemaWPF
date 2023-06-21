@@ -19,6 +19,7 @@ namespace CinemaWPF.DataBase
         public static Session CurrentSession { get; set; }
         public static Ticket CurrentTicket { get; set; }
         public static string CurrentPlace { get; set; }
+        public static bool RedMovie { get; set; }
 
 
         //Add

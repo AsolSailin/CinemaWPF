@@ -199,11 +199,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\AddingMoviePage.xaml">
+    <Page Include="Pages\AddingMovieSessionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\AddingMovieSessionPage.xaml">
+    <Page Include="Pages\AddingOrEditingMoviePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -224,10 +224,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ClientAccountPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\EditingMoviePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -262,11 +258,11 @@
     <Compile Include="Pages\AddingHallPage.xaml.cs">
       <DependentUpon>AddingHallPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AddingMoviePage.xaml.cs">
-      <DependentUpon>AddingMoviePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\AddingMovieSessionPage.xaml.cs">
       <DependentUpon>AddingMovieSessionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddingOrEditingMoviePage.xaml.cs">
+      <DependentUpon>AddingOrEditingMoviePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AdminAccountPage.xaml.cs">
       <DependentUpon>AdminAccountPage.xaml</DependentUpon>
@@ -282,9 +278,6 @@
     </Compile>
     <Compile Include="Pages\ClientAccountPage.xaml.cs">
       <DependentUpon>ClientAccountPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\EditingMoviePage.xaml.cs">
-      <DependentUpon>EditingMoviePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\InitialPage.xaml.cs">
       <DependentUpon>InitialPage.xaml</DependentUpon>

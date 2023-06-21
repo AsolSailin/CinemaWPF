@@ -38,5 +38,10 @@ namespace CinemaWPF.Pages
             tbDuration.Text = DataBase.MongoDataBase.CurrentMovie.Duration;
             tbDescription.Text = DataBase.MongoDataBase.CurrentMovie.Description;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DataBase.MongoDataBase.RedMovie = true;
+        }
     }
 }
