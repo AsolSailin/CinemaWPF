@@ -185,6 +185,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Core\DatesClass.cs" />
     <Compile Include="Core\Hall.cs" />
     <Compile Include="Core\Movie.cs" />
     <Compile Include="Core\Session.cs" />

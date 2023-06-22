@@ -58,7 +58,7 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock Grid.Row="1" Grid.Column="0" x:Name="tbDate" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="{Binding Path=date}"></TextBlock>
+                                    <TextBlock Grid.Row="1" Grid.Column="0" x:Name="tbDate" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="{Binding Date}"></TextBlock>
                                     <ListView x:Name="lvTimes" >
                                         <ListView.ItemsPanel>
                                             <ItemsPanelTemplate>
@@ -68,7 +68,7 @@
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <StackPanel Orientation="Vertical">
-                                                    <Button x:Name="btnTime"></Button>
+                                                    <Button x:Name="btnTime" Content="{Binding Time}"></Button>
                                                 </StackPanel>
                                             </DataTemplate>
                                         </ListView.ItemTemplate>
