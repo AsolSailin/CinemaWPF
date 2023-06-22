@@ -28,11 +28,11 @@ namespace CinemaWPF.Pages
         public ChoosingHallMovieSessionPage()
         {
             InitializeComponent();
+            imgPoster.Source = new BitmapImage(new Uri(@"/CinemaWPF;component" + DataBase.MongoDataBase.CurrentMovie.Poster, UriKind.Relative));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DataBase.MongoDataBase.CurrentMovie = DataBase.MongoDataBase.FindByMovieName("Чебурашка");
             var btn = (Button)sender;
             DataBase.MongoDataBase.CurrentHall = DataBase.MongoDataBase.FindByHallName(btn.Content.ToString());
             NavClass.NextPage(new NavComponentsClass("ВЫБОР ДАТЫ СЕАНСА", new ChoosingDateMovieSessionPage()));

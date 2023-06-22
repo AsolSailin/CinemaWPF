@@ -28,6 +28,7 @@ namespace CinemaWPF.Pages
         public ChoosingDateMovieSessionPage()
         {
             InitializeComponent();
+            imgPoster.Source = new BitmapImage(new Uri(@"/CinemaWPF;component" + DataBase.MongoDataBase.CurrentMovie.Poster, UriKind.Relative));
 
             switch (DataBase.MongoDataBase.CurrentHall.Name)
             {

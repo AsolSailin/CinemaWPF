@@ -28,6 +28,7 @@ namespace CinemaWPF.Pages
         public ChoosingTimeMovieSessionPage()
         {
             InitializeComponent();
+            imgPoster.Source = new BitmapImage(new Uri(@"/CinemaWPF;component" + DataBase.MongoDataBase.CurrentMovie.Poster, UriKind.Relative));
             tbDate.Text = DataBase.MongoDataBase.CurrentDate;
             times = DataBase.MongoDataBase.GetSessionTimeList(DataBase.MongoDataBase.CurrentDate, DataBase.MongoDataBase.CurrentHall.Name, DataBase.MongoDataBase.CurrentMovie);
 
