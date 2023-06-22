@@ -13,9 +13,7 @@
             <RowDefinition Height="150*"/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer  Height="300" Width="600" ScrollViewer.VerticalScroc:\users\руслана\source\repos\cinemawpf\cinemawpf\pages\initialpage.xaml
-c:\users\руслана\source\repos\cinemawpf\cinemawpf\pages\initialpage.xaml.cs
-llBarVisibility="Disabled">
+        <ScrollViewer  Height="300" Width="600" ScrollViewer.VerticalScrollBarVisibility="Disabled">
             <StackPanel>
                 <ListView x:Name="lvMovies" >
                     <ListView.ItemsPanel>

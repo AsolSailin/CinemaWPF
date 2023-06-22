@@ -28,11 +28,11 @@ namespace CinemaWPF.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (tbLogin.Text != "" && tbPassword.Text != "")
+            if (tbLogin.Text != "" && pbPassword.Password != "")
             {
                 DataBase.MongoDataBase.CurrentUser = DataBase.MongoDataBase.FindByUserLogin(tbLogin.Text);
 
-                if (DataBase.MongoDataBase.CurrentUser != null && DataBase.MongoDataBase.CurrentUser.Password == tbPassword.Text)
+                if (DataBase.MongoDataBase.CurrentUser != null && DataBase.MongoDataBase.CurrentUser.Password == pbPassword.Password)
                 {
                     if (DataBase.MongoDataBase.CurrentUser.Role == "Client")
                         NavClass.NextPage(new NavComponentsClass("ЛИЧНЫЙ КАБИНЕТ", new ClientAccountPage()));
