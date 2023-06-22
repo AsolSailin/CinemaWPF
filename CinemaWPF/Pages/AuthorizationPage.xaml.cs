@@ -30,7 +30,7 @@ namespace CinemaWPF.Pages
         {
             if (tbLogin.Text != "" && pbPassword.Password != "")
             {
-                DataBase.MongoDataBase.CurrentUser = DataBase.MongoDataBase.FindByUserLogin(tbLogin.Text);
+                DataBase.MongoDataBase.CurrentUser = DataBase.MongoDataBase.FindUserByLogin(tbLogin.Text);
 
                 if (DataBase.MongoDataBase.CurrentUser != null && DataBase.MongoDataBase.CurrentUser.Password == pbPassword.Password)
                 {

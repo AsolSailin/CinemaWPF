@@ -38,8 +38,8 @@ namespace CinemaWPF.Pages
             {
                 string[] needTime = tbTime.Text.Split(':');
                 DateTime expectedDateTime = Convert.ToDateTime(dpDate.SelectedDate).Add(new TimeSpan(Convert.ToInt32(needTime[0]), Convert.ToInt32(needTime[1]), 0));
-                session.Movie = DataBase.MongoDataBase.FindByMovieName(tbMovieName.Text);
-                session.Hall = DataBase.MongoDataBase.FindByHallName(tbHallName.Text);
+                session.Movie = DataBase.MongoDataBase.FindMovieByName(tbMovieName.Text);
+                session.Hall = DataBase.MongoDataBase.FindHallByName(tbHallName.Text);
 
                 if (expectedDateTime >= DateTime.Now && session.Movie != null && session.Hall != null)
                 {

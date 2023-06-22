@@ -33,7 +33,7 @@ namespace CinemaWPF.Pages
                 tbPhoneNumber.Text != "" && tbEMail.Text != "" && tbLogin.Text != "" &&
                 tbPassword.Text != "" && tbPasswordRepeat.Text != "")
             {
-                if (DataBase.MongoDataBase.FindByUserLogin(tbLogin.Text) == null)
+                if (DataBase.MongoDataBase.FindUserByLogin(tbLogin.Text) == null)
                 {
                     var createUser = new User()
                     {

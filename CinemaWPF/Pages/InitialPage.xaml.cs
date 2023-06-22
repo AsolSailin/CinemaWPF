@@ -41,7 +41,7 @@ namespace CinemaWPF.Pages
 
                 tb?.Dispatcher.BeginInvoke(new Func<bool>(tb.Focus));
 
-                DataBase.MongoDataBase.CurrentMovie = DataBase.MongoDataBase.FindByMovieName(tb.Text);
+                DataBase.MongoDataBase.CurrentMovie = DataBase.MongoDataBase.FindMovieByName(tb.Text);
                 NavClass.NextPage(new NavComponentsClass("ИНФОРМАЦИЯ О ФИЛЬМЕ", new MovieInfoPage()));
             }
         }

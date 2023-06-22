@@ -34,7 +34,7 @@ namespace CinemaWPF.Pages
         private void HallBtn_Click(object sender, RoutedEventArgs e)
         {
             var btn = (Button)sender;
-            DataBase.MongoDataBase.CurrentHall = DataBase.MongoDataBase.FindByHallName(btn.Content.ToString());
+            DataBase.MongoDataBase.CurrentHall = DataBase.MongoDataBase.FindHallByName(btn.Content.ToString());
             NavClass.NextPage(new NavComponentsClass("ВЫБОР ДАТЫ СЕАНСА", new ChoosingDateMovieSessionPage()));
         }
 

@@ -48,7 +48,7 @@ namespace CinemaWPF.Pages
                 tbDuration.Text != "" && tbPrice2D.Text != "" && tbPrice3D.Text != "" &&
                 tbPriceVIP.Text != "" && tbDescription.Text != "" && imageName != "")
             {
-                if (DataBase.MongoDataBase.FindByMovieName(tbName.Text) == null)
+                if (DataBase.MongoDataBase.FindMovieByName(tbName.Text) == null)
                 {
                     DataBase.MongoDataBase.CurrentMovie = new Movie()
                     {

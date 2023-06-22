@@ -65,7 +65,7 @@ namespace CinemaWPF.DataBase
         }
 
         //Find
-        public static User FindByUserLogin(string login)
+        public static User FindUserByLogin(string login)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Cinema_WPF_DB");
@@ -75,7 +75,7 @@ namespace CinemaWPF.DataBase
             return user;
         }
 
-        public static Movie FindByMovieName(string name)
+        public static Movie FindMovieByName(string name)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Cinema_WPF_DB");
@@ -85,7 +85,7 @@ namespace CinemaWPF.DataBase
             return movie;
         }
 
-        public static Hall FindByHallName(string name)
+        public static Hall FindHallByName(string name)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Cinema_WPF_DB");
@@ -170,14 +170,6 @@ namespace CinemaWPF.DataBase
             var collection = database.GetCollection<Session>("SessionList");
             await collection.DeleteOneAsync(x => x.Id == id);
         }
-
-        /*public static void DeleteExpiredTicket()
-        {
-            var client = new MongoClient("mongodb://localhost");
-            var database = client.GetDatabase("Cinema_WPF_DB");
-            var collection = database.GetCollection<Ticket>("TicketList");
-            collection.DeleteMany(x => DateTime.Now > x.DateTimeCreate);
-        }*/
 
         //Get
         public static List<Movie> GetMovieList()
