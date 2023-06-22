@@ -20,6 +20,7 @@ namespace CinemaWPF.DataBase
         public static Ticket CurrentTicket { get; set; }
         public static string CurrentPlace { get; set; }
         public static bool RedMovie { get; set; }
+        public static string CurrentDate { get; set; }
 
 
         //Add

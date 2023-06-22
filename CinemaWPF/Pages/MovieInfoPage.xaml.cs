@@ -58,7 +58,7 @@ namespace CinemaWPF.Pages
 
         private void SessionsBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavClass.NextPage(new NavComponentsClass("СЕАНСЫ", new SessionTimePage()));
+            NavClass.NextPage(new NavComponentsClass("ВЫБОР ЗАЛА", new ChoosingHallMovieSessionPage()));
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)

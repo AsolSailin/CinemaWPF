@@ -29,8 +29,8 @@ namespace CinemaWPF.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (tbSurname.Text != "" && tbName.Text != "" && tbPatronymic.Text != "" && 
-                tbPhoneNumber.Text != "" && tbEMail.Text != "" && tbLogin.Text != "" && 
+            if (tbSurname.Text != "" && tbName.Text != "" && tbPatronymic.Text != "" &&
+                tbPhoneNumber.Text != "" && tbEMail.Text != "" && tbLogin.Text != "" &&
                 tbPassword.Text != "" && tbPasswordRepeat.Text != "")
             {
                 if (DataBase.MongoDataBase.FindByUserLogin(tbLogin.Text) == null)

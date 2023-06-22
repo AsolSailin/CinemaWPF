@@ -56,7 +56,7 @@
                         <TextBox Grid.Row="5" Grid.Column="1" x:Name="tbEMail" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                     </Grid>
                 </StackPanel>
-                
+
                 <StackPanel Grid.Column="1" Grid.RowSpan="4" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <Grid>
                         <Grid.RowDefinitions>

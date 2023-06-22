@@ -216,6 +216,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ChoosingDateMovieSessionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChoosingHallMovieSessionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChoosingTimeMovieSessionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CinemaHallPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -237,10 +249,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\RegistrationPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\SessionTimePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -271,6 +279,15 @@
     <Compile Include="Pages\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ChoosingDateMovieSessionPage.xaml.cs">
+      <DependentUpon>ChoosingDateMovieSessionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChoosingHallMovieSessionPage.xaml.cs">
+      <DependentUpon>ChoosingHallMovieSessionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChoosingTimeMovieSessionPage.xaml.cs">
+      <DependentUpon>ChoosingTimeMovieSessionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CinemaHallPage.xaml.cs">
       <DependentUpon>CinemaHallPage.xaml</DependentUpon>
     </Compile>
@@ -288,9 +305,6 @@
     </Compile>
     <Compile Include="Pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\SessionTimePage.xaml.cs">
-      <DependentUpon>SessionTimePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TicketBuyPage.xaml.cs">
       <DependentUpon>TicketBuyPage.xaml</DependentUpon>
