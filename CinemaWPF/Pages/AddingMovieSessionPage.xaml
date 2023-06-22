@@ -37,13 +37,13 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Grid.Row="0" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Дата показа:</TextBlock>
-                <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                 <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Время показа:</TextBlock>
-                <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                 <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Название зала (2D, 3D, VIP):</TextBlock>
-                <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                 <TextBlock Grid.Row="3" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Название фильма:</TextBlock>
-                <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                 <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Margin="10">Создать зал</Button>
             </Grid>
         </StackPanel>

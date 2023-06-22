@@ -51,13 +51,13 @@
 
                         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10 0 0 0">ДАННЫЕ КИНОТЕАТРА</TextBlock>
                         <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Юр.Лицо:</TextBlock>
-                        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="АО &quot;Park Cinema&quot;"></TextBox>
+                        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="АО &quot;Park Cinema&quot;" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">ИНН:</TextBlock>
-                        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="7705995118"></TextBox>
+                        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="7705995118" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="3" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">КПП:</TextBlock>
-                        <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="773001001"></TextBox>
+                        <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="773001001" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="4" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">ОГРН:</TextBlock>
-                        <TextBox Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="1127746658995 от 05.15"></TextBox>
+                        <TextBox Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="1127746658995 от 05.15" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                     </Grid>
                 </StackPanel>
                 
@@ -77,11 +77,11 @@
 
                         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10 0 0 0">АДРЕС:</TextBlock>
                         <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Индекс:</TextBlock>
-                        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="012345"></TextBox>
+                        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="012345" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Город:</TextBlock>
-                        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="Казань"></TextBox>
+                        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="Казань" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="3" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Улица, дом:</TextBlock>
-                        <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="ул. Павлюхина, д.91"></TextBox>
+                        <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" Text="ул. Павлюхина, д.91" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="4" FontSize="17" Margin="10"></TextBlock>
                     </Grid>
                 </StackPanel>
@@ -100,9 +100,9 @@
 
                         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10 10 0 0">Контактная информация:</TextBlock>
                         <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Телефон:</TextBlock>
-                        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Height="27" Background="#FF8153D4" Margin="10" Text="8 (927) 415-61-40"></TextBox>
+                        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Height="27" Background="#FF8153D4" Margin="10" Text="8 (927) 415-61-40" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Почта:</TextBlock>
-                        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Height="27" Background="#FF8153D4" Margin="10" Text="park_cinema@email.ru"></TextBox>
+                        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="140" Height="27" Background="#FF8153D4" Margin="10" Text="park_cinema@email.ru" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                     </Grid>
                 </StackPanel>
             </Grid>

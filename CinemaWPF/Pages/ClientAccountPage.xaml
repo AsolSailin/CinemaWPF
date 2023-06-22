@@ -46,15 +46,15 @@
 
                         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">ЛИЧНЫЕ ДАННЫЕ</TextBlock>
                         <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Фамилия:</TextBlock>
-                        <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbSurname" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False"></TextBox>
+                        <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbSurname" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False" VerticalContentAlignment="Center" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Имя:</TextBlock>
-                        <TextBox Grid.Row="2" Grid.Column="1" x:Name="tbName" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False"></TextBox>
+                        <TextBox Grid.Row="2" Grid.Column="1" x:Name="tbName" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False" VerticalContentAlignment="Center" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="3" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Отчество:</TextBlock>
-                        <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbPatronymic" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False"></TextBox>
+                        <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbPatronymic" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False" VerticalContentAlignment="Center" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="4" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Номер телефона:</TextBlock>
-                        <TextBox Grid.Row="4" Grid.Column="1" x:Name="tbPhoneNumber" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False"></TextBox>
+                        <TextBox Grid.Row="4" Grid.Column="1" x:Name="tbPhoneNumber" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False" VerticalContentAlignment="Center" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="5" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Почта:</TextBlock>
-                        <TextBox Grid.Row="5" Grid.Column="1" x:Name="tbEMail" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False"></TextBox>
+                        <TextBox Grid.Row="5" Grid.Column="1" x:Name="tbEMail" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False" VerticalContentAlignment="Center" FontSize="11"></TextBox>
                     </Grid>
                 </StackPanel>
 
@@ -75,9 +75,9 @@
 
                         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">ДАННЫЕ ДЛЯ ВХОДА:</TextBlock>
                         <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Логин:</TextBlock>
-                        <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbLogin" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False"></TextBox>
+                        <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbLogin" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False" VerticalContentAlignment="Center" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Пароль:</TextBlock>
-                        <TextBox Grid.Row="2" Grid.Column="1" x:Name="tbPassword" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False"></TextBox>
+                        <TextBox Grid.Row="2" Grid.Column="1" x:Name="tbPassword" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="27" Background="#FF8153D4" Margin="10" IsEnabled="False" VerticalContentAlignment="Center" FontSize="11"></TextBox>
                         <TextBlock Grid.Row="3" FontSize="17" Margin="10"></TextBlock>
                         <TextBlock Grid.Row="4" FontSize="17" Margin="10"></TextBlock>
                         <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="140" Margin="10" Content="Редактировать" Click="Button_Click"></Button>

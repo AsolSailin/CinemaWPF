@@ -34,10 +34,10 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Grid.Row="0" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Логин:</TextBlock>
-                <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbLogin" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="170" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
+                <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbLogin" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="170" Height="27" Background="#FF8153D4" Margin="10" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
                 <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Пароль:</TextBlock>
-                <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbPassword" VerticalAlignment="Center" HorizontalAlignment="Left" Width="170" Height="27" Background="#FF8153D4" Margin="10"></TextBox>
-                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Margin="10">Войти</Button>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbPassword" VerticalAlignment="Center" HorizontalAlignment="Left" Width="170" Height="27" Background="#FF8153D4" Margin="10" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
+                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Margin="10" Content="Войти"></Button>
                 <TextBlock Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="White">
                     Нет аккаунта? 
                     <Hyperlink Click="Hyperlink_Click" Foreground="#FF8153D4">Зарегистируйтесь</Hyperlink>
