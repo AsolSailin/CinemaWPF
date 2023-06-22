@@ -73,6 +73,7 @@ namespace CinemaWPF.Pages
                 foreach (var t in DataBase.MongoDataBase.GetSessionTimeList(d, btn.Content.ToString(), DataBase.MongoDataBase.CurrentMovie))
                 {
                     datesClass.Time = t;
+                    lvTimes.Items.Add(t);
                 }
                 lvDates.Items.Add(datesClass);  
             }
