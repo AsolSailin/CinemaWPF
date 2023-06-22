@@ -26,7 +26,7 @@ namespace CinemaWPF.Pages
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AuthBtn_Click(object sender, RoutedEventArgs e)
         {
             if (tbLogin.Text != "" && pbPassword.Password != "")
             {
@@ -49,7 +49,7 @@ namespace CinemaWPF.Pages
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
-            NavClass.NextPage(new NavComponentsClass("СТРАНИЦА РЕГИСТРАЦИИ", new RegistrationPage()));
+            NavClass.NextPage(new NavComponentsClass("РЕГИСТРАЦИЯ", new RegistrationPage()));
         }
 
         //Navigation

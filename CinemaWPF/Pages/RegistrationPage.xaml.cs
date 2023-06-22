@@ -27,7 +27,7 @@ namespace CinemaWPF.Pages
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
             if (tbSurname.Text != "" && tbName.Text != "" && tbPatronymic.Text != "" &&
                 tbPhoneNumber.Text != "" && tbEMail.Text != "" && tbLogin.Text != "" &&

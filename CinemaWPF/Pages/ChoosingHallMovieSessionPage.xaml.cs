@@ -31,7 +31,7 @@ namespace CinemaWPF.Pages
             imgPoster.Source = new BitmapImage(new Uri(@"/CinemaWPF;component" + DataBase.MongoDataBase.CurrentMovie.Poster, UriKind.Relative));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void HallBtn_Click(object sender, RoutedEventArgs e)
         {
             var btn = (Button)sender;
             DataBase.MongoDataBase.CurrentHall = DataBase.MongoDataBase.FindByHallName(btn.Content.ToString());

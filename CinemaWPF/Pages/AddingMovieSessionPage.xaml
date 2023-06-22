@@ -38,15 +38,15 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Grid.Row="0" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Дата показа:</TextBlock>
-                <DatePicker Grid.Row="0" Grid.Column="1" x:Name="dpDate" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Height="27" Background="#FF8153D4" Margin="10" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></DatePicker>
+                <DatePicker Grid.Row="0" Grid.Column="1" x:Name="dpDate" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Height="27" Background="#FF8153D4" Margin="10" Padding="5 0 5 0" VerticalContentAlignment="Center" Foreground="White" FontSize="12"></DatePicker>
                 <TextBlock Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10 10 10 0">Время показа:</TextBlock>
-                <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbTime" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Height="27" Background="#FF8153D4" Margin="10 10 10 0" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbTime" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Height="27" Background="#FF8153D4" Margin="10 10 10 0" Padding="5 0 5 0" VerticalContentAlignment="Center" Foreground="White" FontSize="12"></TextBox>
                 <TextBlock Grid.Row="2" Grid.Column="1" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="10">(формат времени чч:мм)</TextBlock>
                 <TextBlock Grid.Row="3" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Название зала (2D, 3D, VIP):</TextBlock>
-                <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbHallName" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Height="27" Background="#FF8153D4" Margin="10" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
-                <TextBlock Grid.Row="4" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10 10 10 0">Название фильма:</TextBlock>
-                <TextBox Grid.Row="4" Grid.Column="1" x:Name="tbMovieName" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="27" Background="#FF8153D4" Margin="10 10 10 0" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
-                <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Margin="10" Content="Создать зал" Click="Button_Click"></Button>
+                <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbHallName" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="200" Height="27" Background="#FF8153D4" Margin="10" Padding="5 0 5 0" VerticalContentAlignment="Center" Foreground="White" FontSize="12"></TextBox>
+                <TextBlock Grid.Row="4" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" Margin="10">Название фильма:</TextBlock>
+                <TextBox Grid.Row="4" Grid.Column="1" x:Name="tbMovieName" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="27" Background="#FF8153D4" Margin="10" Padding="5 0 5 0" VerticalContentAlignment="Center" Foreground="White" FontSize="12"></TextBox>
+                <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Content="Добавить сеанс" Click="AddingSessionBtn_Click"></Button>
             </Grid>
         </StackPanel>
     </Grid>

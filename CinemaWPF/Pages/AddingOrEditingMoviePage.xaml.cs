@@ -31,13 +31,13 @@ namespace CinemaWPF.Pages
 
             if (DataBase.MongoDataBase.RedMovie)
             {
-                btnSaveOrRed.Content = "Редактировать";
-                btnSaveOrRed.Click += RedBtn_Click;
+                btnSaveOrEdit.Content = "Редактировать";
+                btnSaveOrEdit.Click += EditBtn_Click;
             }
             else
             {
-                btnSaveOrRed.Content = "Сохранить";
-                btnSaveOrRed.Click += SaveBtn_Click;
+                btnSaveOrEdit.Content = "Сохранить";
+                btnSaveOrEdit.Click += SaveBtn_Click;
             }
         }
 
@@ -76,7 +76,7 @@ namespace CinemaWPF.Pages
                 MessageBox.Show("Для добавления нового фильма все поля должны быть заполнены!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
-        private void RedBtn_Click(object sender, RoutedEventArgs e)
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
             if (tbName.Text != "" && tbGenre.Text != "" && tbRegisseur.Text != "" &&
                 tbProducer.Text != "" && tbScript.Text != "" && tbCountry.Text != "" &&
@@ -112,7 +112,7 @@ namespace CinemaWPF.Pages
         //Navigation
         private void SessionBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavClass.NextPage(new NavComponentsClass("ДОБАВЛЕНИЕ НОВОГО КИНОСЕАНСА", new AddingMovieSessionPage()));
+            NavClass.NextPage(new NavComponentsClass("ДОБАВЛЕНИЕ НОВОГО СЕАНСА", new AddingMovieSessionPage()));
         }
 
         private void CatalogBtn_Click(object sender, RoutedEventArgs e)

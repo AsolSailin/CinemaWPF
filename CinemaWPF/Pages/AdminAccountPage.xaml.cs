@@ -42,21 +42,25 @@ namespace CinemaWPF.Pages
             tbPassword.Text = DataBase.MongoDataBase.CurrentUser.Password;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
             if (isDisable)
             {
                 isDisable = false;
+
                 tbLogin.IsEnabled = true;
                 tbPassword.IsEnabled = true;
+
                 tbLogin.Foreground = Brushes.White;
                 tbPassword.Foreground = Brushes.White;
             }
             else
             {
                 isDisable = true;
+
                 tbLogin.IsEnabled = false;
                 tbPassword.IsEnabled = false;
+
                 tbLogin.Foreground = Brushes.Black;
                 tbPassword.Foreground = Brushes.Black;
             }

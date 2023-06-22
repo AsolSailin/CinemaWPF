@@ -26,7 +26,7 @@ namespace CinemaWPF.Pages
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CreateHallBtn_Click(object sender, RoutedEventArgs e)
         {
             if (tbHallName.Text != "")
             {

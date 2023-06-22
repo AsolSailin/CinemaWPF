@@ -31,18 +31,7 @@ namespace CinemaWPF.Pages
             dpDate.Text = DateTime.Now.ToString();
         }
 
-        //Navigation
-        private void AddingMovieBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NavClass.NextPage(new NavComponentsClass("ДОБАВЛЕНИЕ НОВОГО КИНОФИЛЬМА", new AddingOrEditingMoviePage()));
-        }
-
-        private void CatalogBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AddingSessionBtn_Click(object sender, RoutedEventArgs e)
         {
             if (dpDate.Text != "" && tbTime.Text != "" && 
                 tbHallName.Text != "" && tbMovieName.Text !="")
@@ -75,6 +64,17 @@ namespace CinemaWPF.Pages
             }
             else
                 MessageBox.Show("Для создания нового киносеанса все поля должны быть заполнены!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        //Navigation
+        private void AddingMovieBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("ДОБАВЛЕНИЕ НОВОГО ФИЛЬМА", new AddingOrEditingMoviePage()));
+        }
+
+        private void CatalogBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
         }
     }
 }

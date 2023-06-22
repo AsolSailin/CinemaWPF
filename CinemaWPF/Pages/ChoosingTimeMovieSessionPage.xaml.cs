@@ -42,7 +42,7 @@ namespace CinemaWPF.Pages
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void TimeBtn_Click(object sender, RoutedEventArgs e)
         {
             var btn = (Button)sender;
             time = btn.Content.ToString();

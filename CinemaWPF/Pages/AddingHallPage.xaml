@@ -26,8 +26,8 @@
                 </Grid.ColumnDefinitions>
                 
                 <TextBlock Grid.Row="0" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Margin="10">Название зала:</TextBlock>
-                <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbHallName" VerticalAlignment="Center" HorizontalAlignment="Left" Width="170" Height="27" Background="#FF8153D4" Margin="10" VerticalContentAlignment="Center" Foreground="White" FontSize="11"></TextBox>
-                <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Margin="10">Создать зал</Button>
+                <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbHallName" VerticalAlignment="Center" HorizontalAlignment="Left" Width="170" Height="27" Background="#FF8153D4" Margin="10" Padding="5 0 5 0" VerticalContentAlignment="Center" Foreground="White" FontSize="12"></TextBox>
+                <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Margin="10" Content="Создать зал" Click="CreateHallBtn_Click"></Button>
             </Grid>
         </StackPanel>
     </Grid>

@@ -36,7 +36,7 @@ namespace CinemaWPF.Pages
                 btnEdit.Click += EditBtn_Click;
                 btnDelete.Click += DeleteBtn_Click;
             }
-            else
+            else if (DataBase.MongoDataBase.CurrentUser == null || DataBase.MongoDataBase.CurrentUser.Role == "Client")
             {
                 btnBuy.Visibility = Visibility.Visible;
                 btnBuy.Click += SessionsBtn_Click;
@@ -58,7 +58,10 @@ namespace CinemaWPF.Pages
 
         private void SessionsBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavClass.NextPage(new NavComponentsClass("ВЫБОР ЗАЛА", new ChoosingHallMovieSessionPage()));
+            if (DataBase.MongoDataBase.CurrentUser != null)
+                NavClass.NextPage(new NavComponentsClass("ВЫБОР ЗАЛА", new ChoosingHallMovieSessionPage()));
+            else
+                MessageBox.Show("Для покупки билета необходимо авторизоваться", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)

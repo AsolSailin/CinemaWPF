@@ -31,9 +31,9 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
-                <Button Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Margin="10" Content="2D" Click="Button_Click"></Button>
-                <Button Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Margin="10" Content="3D" Click="Button_Click"></Button>
-                <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Margin="10" Content="VIP" Click="Button_Click"></Button>
+                <Button Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Margin="10" Content="2D" Click="HallBtn_Click"></Button>
+                <Button Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Margin="10" Content="3D" Click="HallBtn_Click"></Button>
+                <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Margin="10" Content="VIP" Click="HallBtn_Click"></Button>
             </Grid>
         </StackPanel>
     </Grid>

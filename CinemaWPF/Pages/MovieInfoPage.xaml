@@ -46,13 +46,13 @@
                             <RowDefinition />
                         </Grid.RowDefinitions>
 
-                        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" x:Name="tbName" TextWrapping="Wrap"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Name="tbGenre" TextWrapping="Wrap"></TextBlock>
-                        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" x:Name="tbRegisseur" TextWrapping="Wrap"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.ColumnSpan="2" x:Name="tbProducer" TextWrapping="Wrap"></TextBlock>
-                        <TextBlock Grid.Row="4" Grid.ColumnSpan="2" x:Name="tbScript" TextWrapping="Wrap"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.ColumnSpan="2" x:Name="tbCountry" TextWrapping="Wrap"></TextBlock>
-                        <TextBlock Grid.Row="6" Grid.ColumnSpan="2" x:Name="tbDuration" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" x:Name="tbName" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Name="tbGenre" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" x:Name="tbRegisseur" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.ColumnSpan="2" x:Name="tbProducer" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="4" Grid.ColumnSpan="2" x:Name="tbScript" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.ColumnSpan="2" x:Name="tbCountry" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Grid.Row="6" Grid.ColumnSpan="2" x:Name="tbDuration" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" TextWrapping="Wrap"></TextBlock>
                     </Grid>
 
                     <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
