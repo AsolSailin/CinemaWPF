@@ -40,7 +40,7 @@
                 <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Margin="10" Content="Войти" Click="AuthBtn_Click"></Button>
                 <TextBlock Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="White">
                     Нет аккаунта? 
-                    <Hyperlink Click="Hyperlink_Click" Foreground="#FF8153D4">Зарегистируйтесь</Hyperlink>
+                    <Hyperlink Click="Hyperlink_Click" Foreground="#FF8153D4">Зарегистируйся</Hyperlink>
                 </TextBlock>
             </Grid>
         </StackPanel>

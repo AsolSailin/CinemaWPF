@@ -33,12 +33,25 @@ namespace CinemaWPF.Pages
             {
                 btnSaveOrEdit.Content = "Редактировать";
                 btnSaveOrEdit.Click += EditBtn_Click;
+                GetTextBoxValue();
             }
             else
             {
                 btnSaveOrEdit.Content = "Сохранить";
                 btnSaveOrEdit.Click += SaveBtn_Click;
             }
+        }
+
+        public void GetTextBoxValue()
+        {
+            tbName.Text = DataBase.MongoDataBase.CurrentMovie.Name;
+            tbGenre.Text = DataBase.MongoDataBase.CurrentMovie.Genre;
+            tbRegisseur.Text = DataBase.MongoDataBase.CurrentMovie.Regisseur;
+            tbProducer.Text = DataBase.MongoDataBase.CurrentMovie.Producer;
+            tbScript.Text = DataBase.MongoDataBase.CurrentMovie.Script;
+            tbCountry.Text = DataBase.MongoDataBase.CurrentMovie.Country;
+            tbDuration.Text = DataBase.MongoDataBase.CurrentMovie.Duration;
+            tbDescription.Text = DataBase.MongoDataBase.CurrentMovie.Description;
         }
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)

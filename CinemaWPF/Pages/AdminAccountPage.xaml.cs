@@ -75,6 +75,12 @@ namespace CinemaWPF.Pages
             }
         }
 
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DataBase.MongoDataBase.CurrentUser = null;
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
+        }
+
         //Navigation
         private void CinemaInfoBtn_Click(object sender, RoutedEventArgs e)
         {

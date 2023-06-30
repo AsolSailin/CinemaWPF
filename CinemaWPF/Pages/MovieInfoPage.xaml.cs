@@ -26,7 +26,12 @@ namespace CinemaWPF.Pages
             InitializeComponent();
             GetTextBoxValue();
 
-            if (DataBase.MongoDataBase.CurrentUser.Role == "Admin")
+            if (DataBase.MongoDataBase.CurrentUser == null || DataBase.MongoDataBase.CurrentUser.Role == "Client")
+            {
+                btnBuy.Visibility = Visibility.Visible;
+                btnBuy.Click += SessionsBtn_Click;
+            }
+            else if (DataBase.MongoDataBase.CurrentUser.Role == "Admin")
             {
                 btnSessions.Visibility = Visibility.Visible;
                 btnEdit.Visibility = Visibility.Visible;
@@ -36,11 +41,7 @@ namespace CinemaWPF.Pages
                 btnEdit.Click += EditBtn_Click;
                 btnDelete.Click += DeleteBtn_Click;
             }
-            else if (DataBase.MongoDataBase.CurrentUser == null || DataBase.MongoDataBase.CurrentUser.Role == "Client")
-            {
-                btnBuy.Visibility = Visibility.Visible;
-                btnBuy.Click += SessionsBtn_Click;
-            }
+            
         }
 
         public void GetTextBoxValue()

@@ -67,7 +67,7 @@
                         <Button Grid.Column="2" x:Name="btnDelete" Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Удалить"></Button>
                     </Grid>
 
-                    <TextBlock Grid.Row="2" Grid.ColumnSpan="2" x:Name="tbDescription" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock Grid.Row="2" Grid.ColumnSpan="2" x:Name="tbDescription" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="17" TextWrapping="Wrap"></TextBlock>
                 </Grid>
             </StackPanel>
         </ScrollViewer>

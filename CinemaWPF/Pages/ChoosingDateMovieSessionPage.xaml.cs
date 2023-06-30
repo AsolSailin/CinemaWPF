@@ -64,7 +64,7 @@ namespace CinemaWPF.Pages
         {
             var btn = (Button)sender;
             DataBase.MongoDataBase.CurrentDate = btn.Content.ToString();
-            NavClass.NextPage(new NavComponentsClass("ВЫБОР ВРЕМЕНИ КИНОСЕАНСА", new ChoosingTimeMovieSessionPage()));
+            NavClass.NextPage(new NavComponentsClass("ВЫБОР ВРЕМЕНИ СЕАНСА", new ChoosingTimeMovieSessionPage()));
         }
 
         //Navigation

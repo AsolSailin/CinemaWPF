@@ -95,6 +95,24 @@ namespace CinemaWPF.Pages
             }
         }
 
+        private void DeleteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы действительно хотите удалить свой аккаунт?", "",
+                        MessageBoxButton.YesNo,
+                        MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                _ = DataBase.MongoDataBase.DeleteUser(DataBase.MongoDataBase.CurrentUser.Id);
+                MessageBox.Show("Аккаунт был удален");
+                NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
+            }
+        }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DataBase.MongoDataBase.CurrentUser = null;
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
+        }
+
         //Navigation
         private void MyTicketsBtn_Click(object sender, RoutedEventArgs e)
         {

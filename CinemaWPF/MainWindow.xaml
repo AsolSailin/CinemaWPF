@@ -22,16 +22,19 @@
             <RowDefinition Height="70*"/>
             <RowDefinition Height="395*"/>
         </Grid.RowDefinitions>
-        <Rectangle></Rectangle>
-        <Image Source=".\Images\InitialImages\logo.png" HorizontalAlignment="Left" />
-        <TextBlock x:Name="tbTitle" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="#FF8153D4" />
-        <Button Height="40" Width="40" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0" Click="AccountBtn_Click">
-            <Button.Template>
-                <ControlTemplate>
-                    <Image Source=".\Images\InitialImages\account.png"/>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+
+        <Grid Grid.Row="0">
+
+            <Image Source=".\Images\InitialImages\logo.png" HorizontalAlignment="Left" />
+            <TextBlock x:Name="tbTitle" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="#FF8153D4" />
+            <Button Grid.Column="1" Height="40" Width="40" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0" Click="AccountBtn_Click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source=".\Images\InitialImages\account.png"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
         <Frame Grid.Row="1" x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.RowSpan="2"></Frame>
     </Grid>
 </Window>

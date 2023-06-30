@@ -24,6 +24,7 @@ namespace CinemaWPF.Pages
     {
         private int count = 0;
         private string placeNumber;
+        private Button button;
 
         public CinemaHallPage()
         {
@@ -104,6 +105,14 @@ namespace CinemaWPF.Pages
         {
             var btn = (Button)sender;
             placeNumber = btn.Content.ToString();
+
+            if (button != null)
+            {
+                button.Background = (Brush)(new BrushConverter().ConvertFrom("#FF8153D4"));
+            }
+
+            btn.Background = (Brush)(new BrushConverter().ConvertFrom("#FFC7B1EF"));
+            button = btn;
         }
 
         private void OccupiedPlaceBtn_Click(object sender, RoutedEventArgs e)
@@ -127,9 +136,14 @@ namespace CinemaWPF.Pages
 
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
-            _ = DataBase.MongoDataBase.DeleteSession(DataBase.MongoDataBase.CurrentSession.Id);
-            MessageBox.Show("Киносеанс был удален из базы данных");
-            NavClass.NextPage(new NavComponentsClass("ИНФОРМАЦИЯ О ФИЛЬМЕ", new MovieInfoPage()));
+            if (MessageBox.Show("Вы действительно хотите удалить выбранный фильм?", "",
+                        MessageBoxButton.YesNo,
+                        MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                _ = DataBase.MongoDataBase.DeleteSession(DataBase.MongoDataBase.CurrentSession.Id);
+                MessageBox.Show("Киносеанс был удален из базы данных");
+                NavClass.NextPage(new NavComponentsClass("ИНФОРМАЦИЯ О ФИЛЬМЕ", new MovieInfoPage()));
+            }
         }
 
         //Navigation

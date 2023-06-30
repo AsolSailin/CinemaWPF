@@ -33,30 +33,27 @@
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="{Binding Poster}" Width="270" Height="250"/>
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="Номер билета"></TextBlock>
-                                    <TextBlock Text="{Binding ID}"></TextBlock>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Название показа"></TextBlock>
-                                        <TextBlock Text="{Binding Name}"></TextBlock>
+                                        <TextBlock Text="Название показа: "></TextBlock>
+                                        <TextBlock x:Name="tbMovieName" Text="{Binding MovieName}"></TextBlock>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Зал"></TextBlock>
-                                        <TextBlock Text="{Binding ID}"></TextBlock>
+                                        <TextBlock Text="Зал: "></TextBlock>
+                                        <TextBlock Text="{Binding HallName}"></TextBlock>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Номер места"></TextBlock>
-                                        <TextBlock Text="{Binding ID}"></TextBlock>
+                                        <TextBlock Text="Номер места: "></TextBlock>
+                                        <TextBlock Text="{Binding PlaceNumber}"></TextBlock>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Дата"></TextBlock>
-                                        <TextBlock Text="{Binding ID}"></TextBlock>
+                                        <TextBlock Text="Дата: "></TextBlock>
+                                        <TextBlock Text="{Binding Date}"></TextBlock>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Время"></TextBlock>
-                                        <TextBlock Text="{Binding ID}"></TextBlock>
+                                        <TextBlock Text="Время: "></TextBlock>
+                                        <TextBlock Text="{Binding Time}"></TextBlock>
                                     </StackPanel>
-                                    <Button HorizontalAlignment="Center" Content="О фильме"></Button>
-                                    <Button HorizontalAlignment="Center" Content="Вернуть билет"></Button>
+                                    <Button HorizontalAlignment="Center" Content="Вернуть билет" Click="RefundTicketBtn_Click"></Button>
                                 </StackPanel>
                             </StackPanel>
                         </DataTemplate>

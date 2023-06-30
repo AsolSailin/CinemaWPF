@@ -24,12 +24,19 @@ namespace CinemaWPF.Pages
         public TicketsListPage()
         {
             InitializeComponent();
+            DataBase.MongoDataBase.CurrentUser = DataBase.MongoDataBase.FindUserByLogin("user1");
+            lvTickets.ItemsSource = DataBase.MongoDataBase.GetTicketList(DataBase.MongoDataBase.CurrentUser);
         }
 
         //Navigation
         private void CatalogBtn_Click(object sender, RoutedEventArgs e)
         {
             NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
+        }
+
+        private void RefundTicketBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

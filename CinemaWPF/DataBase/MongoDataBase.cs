@@ -40,20 +40,20 @@ namespace CinemaWPF.DataBase
             await collection.InsertOneAsync(movie);
         }
 
-        public static async Task AddHallToDataBase(Hall hall)
-        {
-            var client = new MongoClient("mongodb://localhost");
-            var database = client.GetDatabase("Cinema_WPF_DB");
-            var collection = database.GetCollection<Hall>("HallList");
-            await collection.InsertOneAsync(hall);
-        }
-
         public static async void AddSessionToDataBase(Session session)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Cinema_WPF_DB");
             var collection = database.GetCollection<Session>("SessionList");
             await collection.InsertOneAsync(session);
+        }
+
+        public static async Task AddHallToDataBase(Hall hall)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Cinema_WPF_DB");
+            var collection = database.GetCollection<Hall>("HallList");
+            await collection.InsertOneAsync(hall);
         }
 
         public static async Task AddTicketToDataBase(Ticket ticket)
@@ -103,7 +103,7 @@ namespace CinemaWPF.DataBase
             return session;
         }
 
-        public static Ticket FindTicketByName(ObjectId id)
+        /*public static Ticket FindTicketByName(ObjectId id)
         {
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Cinema_WPF_DB");
@@ -111,7 +111,7 @@ namespace CinemaWPF.DataBase
             var ticket = collection.Find(x => x.Id == id).FirstOrDefault();
 
             return ticket;
-        }
+        }*/
 
         //Replace
         public static async Task UserReplace(User user)
@@ -155,14 +155,6 @@ namespace CinemaWPF.DataBase
             await collection.DeleteOneAsync(x => x.Id == id);
         }
 
-        public static async Task DeleteTicket(ObjectId id)
-        {
-            var client = new MongoClient("mongodb://localhost");
-            var database = client.GetDatabase("Cinema_WPF_DB");
-            var collection = database.GetCollection<Ticket>("TicketList");
-            await collection.DeleteOneAsync(x => x.Id == id);
-        }
-
         public static async Task DeleteSession(ObjectId id)
         {
             var client = new MongoClient("mongodb://localhost");
@@ -170,6 +162,14 @@ namespace CinemaWPF.DataBase
             var collection = database.GetCollection<Session>("SessionList");
             await collection.DeleteOneAsync(x => x.Id == id);
         }
+
+        /*public static async Task DeleteTicket(ObjectId id)
+        {
+            var client = new MongoClient("mongodb://localhost");
+            var database = client.GetDatabase("Cinema_WPF_DB");
+            var collection = database.GetCollection<Ticket>("TicketList");
+            await collection.DeleteOneAsync(x => x.Id == id);
+        }*/
 
         //Get
         public static List<Movie> GetMovieList()
@@ -209,7 +209,8 @@ namespace CinemaWPF.DataBase
             var client = new MongoClient("mongodb://localhost");
             var database = client.GetDatabase("Cinema_WPF_DB");
             var collection = database.GetCollection<Session>("SessionList");
-            var sessions = collection.Find(x => x.Movie.Id == movie.Id).ToList().Where(x => x.Time.ToString("d") == date && x.Hall.Name == hallName);
+            var sessions = collection.Find(x => x.Movie.Id == movie.Id)
+                .ToList().Where(x => x.Time.ToString("d") == date && x.Hall.Name == hallName);
             var timeList = new List<string>();
 
             foreach (var s in sessions)

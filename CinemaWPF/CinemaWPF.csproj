@@ -385,6 +385,7 @@
     <Resource Include="Images\InitialImages\account.png" />
     <Resource Include="Images\InitialImages\logo.ico" />
     <Resource Include="Images\InitialImages\logo.png" />
+    <Resource Include="Images\InitialImages\exit.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

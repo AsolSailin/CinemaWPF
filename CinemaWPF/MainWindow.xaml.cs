@@ -26,15 +26,17 @@ namespace CinemaWPF
         {
             InitializeComponent();
             NavClass.main = this;
-            NavClass.NextPage(new NavComponentsClass("СТРАНИЦА", new ChoosingHallMovieSessionPage()));
+            NavClass.NextPage(new NavComponentsClass("КАТАЛОГ", new InitialPage()));
         }
 
         //Navigation
         private void AccountBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (DataBase.MongoDataBase.CurrentUser.Role == "Client")
+            if (DataBase.MongoDataBase.CurrentUser == null)
+                NavClass.NextPage(new NavComponentsClass("АВТОРИЗАЦИЯ", new AuthorizationPage()));
+            else if (DataBase.MongoDataBase.CurrentUser.Role == "Client")
                 NavClass.NextPage(new NavComponentsClass("ЛИЧНЫЙ КАБИНЕТ", new ClientAccountPage()));
-            else
+            else if (DataBase.MongoDataBase.CurrentUser.Role == "Admin")
                 NavClass.NextPage(new NavComponentsClass("ЛИЧНЫЙ КАБИНЕТ", new AdminAccountPage()));
         }
     }
